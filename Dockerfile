@@ -2,7 +2,7 @@ FROM ubuntu:lasted
 
 RUN sudo apt update
 RUN sudo apt install apache2
-RUN sudo ufw allow 'Apache
+RUN sudo ufw allow 'Apache'
 # Cài đặt curl
 RUN apt-get update && apt-get install -y curl
 # Tải ngrok và giải nén
