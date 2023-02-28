@@ -4,7 +4,7 @@ pipeline{
         stage('Clone'){
             steps
             {
-                git 'https://github.com/tangtuphuc/portforlio.git'
+               git branch: 'main', url: 'https://github.com/tangtuphuc/portforlio.git'
             }
         }
         
