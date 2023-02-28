@@ -11,9 +11,9 @@ pipeline{
         stage('Build docker'){
             steps
             {
-              withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
-                sh 'docker build -t tangtuphuc/nodejs-test:v10 .'
-                sh 'docker push -t tangtuphuc/nodejs-test:v10 .'
+             withDockerRegistry(credentialsId: '1', url: 'https://index.docker.io/v1/') {
+                sh 'docker build -t tangtuphuc/myimage1 .'
+                sh 'docker push -t tangtuphuc/myimage1 .'
                 }
             }
         }
