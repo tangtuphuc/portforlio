@@ -7,6 +7,7 @@ pipeline{
                git branch: 'main', url: 'https://github.com/tangtuphuc/portforlio.git'
             }
         }
+        //build dockerfile
         stage('Build docker'){
             steps
             {
