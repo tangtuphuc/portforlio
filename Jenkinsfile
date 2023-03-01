@@ -4,7 +4,7 @@ pipeline{
         stage('Clone stage'){
             steps
             {
-               git branch: 'master', url: 'https://github.com/tangtuphuc/portforlio.git'
+               git credentialsId: 'webhook', url: 'https://github.com/tangtuphuc/portforlio.git'
             }
         }
         //build dockerfile
