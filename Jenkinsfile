@@ -8,7 +8,7 @@ pipeline{
             }
         }
         //build dockerfile
-        stage('Build docker'){
+        /*stage('Build docker'){
             steps
             {
              withDockerRegistry(credentialsId: '1', url: 'https://index.docker.io/v1/') {
@@ -16,7 +16,7 @@ pipeline{
                 sh 'docker push -t tangtuphuc/myct'
                 }
             }
-        }
+        }*/
         
     }
 }
