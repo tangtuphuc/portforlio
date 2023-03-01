@@ -17,11 +17,11 @@ pipeline{
                 }
             }
         }*/
-        stage('SSH sever')
+        stage('SSH sever'){
             steps{
                 sshagent(['ssh-remote']) {
                         sh 'ssh -o StrictHostKeyChecking=no -l root 192.168.0.104 touch test.txt'
                     }
+                }
             }
-    }
 }
