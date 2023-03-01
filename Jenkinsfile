@@ -12,8 +12,8 @@ pipeline{
             steps
             {
              withDockerRegistry(credentialsId: '1', url: 'https://index.docker.io/v1/') {
-                sh 'docker build -t tangtuphuc/myct .'
-                sh 'docker push tangtuphuc/myct'
+                sh label: '', script: 'docker build -t tangtuphuc/myct .'
+                sh label: '', script: 'docker push tangtuphuc/myct'
                 }
             }
         }

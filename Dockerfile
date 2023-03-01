@@ -7,7 +7,7 @@ WORKDIR /var/www/html
 # Mở cổng 80 để Apache2 có thể lắng nghe các kết nối HTTPs
 EXPOSE 80
 
-ADD ./portforlio /var/www/html/
+ADD ./index.html /var/www/html/
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]
 
