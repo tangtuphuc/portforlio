@@ -8,7 +8,7 @@ pipeline{
             }
         }
         //build dockerfile
-        stage('Build docker'){
+        /*stage('Build docker'){
             steps
             {
              withDockerRegistry(credentialsId: '1', url: 'https://index.docker.io/v1/') {
@@ -16,7 +16,12 @@ pipeline{
                 sh 'docker run -p 6789:80 test:v1'
                 }
             }
-        }
-        
+        }*/
+        stage('SSH sever')
+            steps{
+                sshagent(['ssh-remote']) {
+                        sh 'ssh -o StrictHostKeyChecking=no -l root 192.168.0.104 touch test.txt'
+                    }
+            }
     }
 }
