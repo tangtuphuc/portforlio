@@ -10,10 +10,10 @@ pipeline {
         }
         stage('Setup') {
         steps {
-            sh 'sudo apt-get update'
-            sh 'sudo apt-get install -y nodejs'
-            sh 'sudo apt-get install -y npm'
-            sh 'sudo npm install -g npm@latest'
+            sh 'apt-get update'
+            sh 'apt-get install -y nodejs'
+            sh 'apt-get install -y npm'
+            sh 'npm install -g npm@latest'
             }
             }
         stage('Stage Build'){
