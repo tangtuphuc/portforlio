@@ -5,7 +5,7 @@ pipeline {
   stages {
         stage('Stage Clone'){
             steps{
-                git 'https://github.com/tangtuphuc/portforlio.git'
+                git branch: 'main', url: 'https://github.com/tangtuphuc/portforlio.git'
             }
         }
         stage('Stage Build'){
